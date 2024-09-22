@@ -1,0 +1,97 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  header {
+    background-color: #25D366;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .profile {
+    width: 300px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .profile:hover {
+    transform: scale(1.05);
+  }
+  
+  .profile img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .profile h2 {
+    margin: 15px;
+    color: #333;
+  }
+  
+  .profile p {
+    margin: 0 15px 15px;
+    color: #777;
+  }
+  
+  button {
+    background-color: #25D366;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #128C7E;
+  }
+  
+  @media (max-width: 600px) {
+    .profile {
+      width: calc(100% - 40px);
+    }
+  }
+  /* Estilos específicos da página de lista de perfis aqui */
+header {
+    background-color: #25D366;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column; /* Alteração para exibir os perfis em coluna */
+    align-items: center; /* Centralizar os perfis na tela */
+    padding: 20px;
+  }
+  
+  .profile {
+    width: 70%;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Adicione estilos específicos da página de lista de perfis conforme necessário */
+  

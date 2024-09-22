@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles2.css">
+  <title>Lista de Perfis</title>
+</head>
+<body>
+  <header>
+    <h1>Lista de Perfis</h1>
+  </header>
+
+  <main>
+    <section class="profile" onclick="startChat('Usuário 1')">
+      <img src="avatar1.jpg" alt="Perfil 1">
+      <h2>Usuário 1</h2>
+      <p>Descrição do usuário 1. Algumas informações sobre hobbies, interesses, etc.</p>
+      <button>Iniciar Conversa</button>
+    </section>
+
+    <section class="profile" onclick="startChat('Usuário 2')">
+      <img src="avatar2.jpg" alt="Perfil 2">
+      <h2>Usuário 2</h2>
+      <p>Descrição do usuário 2. Algumas informações sobre hobbies, interesses, etc.</p>
+      <button>Iniciar Conversa</button>
+    </section>
+
+    <section class="profile" onclick="startChat('Usuário 3')">
+      <img src="avatar3.jpg" alt="Perfil 3">
+      <h2>Usuário 3</h2>
+      <p>Descrição do usuário 3. Algumas informações sobre hobbies, interesses, etc.</p>
+      <button>Iniciar Conversa</button>
+    </section>
+
+    <section class="profile" onclick="startChat('Usuário 4')">
+      <img src="avatar4.jpg" alt="Perfil 4">
+      <h2>Usuário 4</h2>
+      <p>Descrição do usuário 4. Algumas informações sobre hobbies, interesses, etc.</p>
+      <button>Iniciar Conversa</button>
+    </section>
+  </main>
+
+  <iframe src="navbar.html" frameborder="0" width="100%" height="60px"></iframe>
+
+
+  <script>
+    function startChat(username) {
+      // Redirecionar para a página de conversa com o usuário selecionado
+      window.location.href = `index.html?user=${encodeURIComponent(username)}`;
+    }
+  </script>
+</body>
+</html>

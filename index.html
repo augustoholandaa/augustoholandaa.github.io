@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-GLhlTQ8iKo7qt4ZrR5P5zjN3/JHXaU9IvVS+5L8EfLIM+ua6U5PUdE2stK62tB+L" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="styles.css">
+  <title>Minha Simulação do WhatsApp</title>
+</head>
+
+
+
+<body>
+    <div id="chat-container">
+      <div id="chat-header">
+        <h2>Conversa com Amigo</h2>
+      </div>
+      <div id="messages-container">
+        <!-- Conteúdo das mensagens aqui -->
+      </div>
+      <div id="input-container">
+        <textarea id="messageInput" placeholder="Digite sua mensagem..."></textarea>
+        <button onclick="sendMessage()">Enviar</button>
+      </div>
+    </div>
+  
+    <!-- Barra de navegação -->
+    <div id="bottom-navbar">
+      <a href="#" class="navbar-item active"><i class="fas fa-comments"></i> Chat</a>
+      <a href="#" class="navbar-item"><i class="fas fa-home"></i> Home</a>
+      <a href="#" class="navbar-item"><i class="fas fa-calendar-alt"></i> Cronograma</a>
+    </div>
+
+
+  <script>
+    function sendMessage() {
+  const messageInput = document.getElementById('messageInput');
+  const messagesContainer = document.getElementById('messages-container');
+
+  const messageText = messageInput.value.trim();
+
+  if (messageText !== '') {
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('message', 'sent');
+    messageElement.innerHTML = `
+      <p>${messageText}</p>
+      <span>${formatTime(new Date())}</span>
+    `;
+
+    messagesContainer.appendChild(messageElement);
+
+    // Limpar o campo de entrada
+    messageInput.value = '';
+
+    // Rolar para o final para exibir a última mensagem
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+}
+
+function formatTime(date) {
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  return `${hours}:${minutes < 10 ? '0' : ''}${minutes}`;
+}
+
+  </script>
+</body>
+</html>
